@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+  background-color: gray;
+  font-family: -apple-system, "Segoe UI", Roboto;
+
+  .navbar--logo img {
+    width: 50px;
+    cursor: pointer;
+  }
+
+  ul li {
+    display: inline-flex;
+    list-style: none;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    min-width: auto;
+  }
+}
