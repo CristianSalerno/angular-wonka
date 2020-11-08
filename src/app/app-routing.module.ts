@@ -14,7 +14,7 @@ const routes: Routes = [
     component:HomeComponent,
   },
   {
-    path:'description',
+    path:'description/:pId',
     component:WonkadescriptionComponent,
   }
 ];

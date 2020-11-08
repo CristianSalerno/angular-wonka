@@ -1,27 +1,31 @@
-.wonka {
+.card-component {
+  display: flex;
+  flex-direction: column;
   margin-top: 10px;
   padding: 10px;
   margin-top: 10px;
   cursor: pointer;
   &:hover {
-    h1,
-    p {
+    h1 {
       color: lightblue;
     }
   }
 
   h1 {
-    font-weight: 500;
     font-size: 1.5em;
-    margin-bottom: 10px;
   }
+
+  p {
+    color: grey;
+  }
+  h1,
   p {
     font-weight: 500;
+    margin-bottom: 10px;
   }
 
   img {
-    width: 250px;
-    height: 250px;
-    margin-top: 10px;
+    width: 300px;
+    margin-bottom: 10px;
   }
 }

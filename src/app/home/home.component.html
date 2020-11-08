@@ -1,3 +1,6 @@
-<div class="home--container"  *ngFor="let wonka of wonkaWorkersList" >
-    <app-card [wonka]="wonka"></app-card>
+<app-searchbar class="search"></app-searchbar>
+<div class="home--container">
+    <div class="card-container" *ngFor="let wonka of wonkaWorkersList">
+        <app-card [wonka]="wonka" [id]="wonka.id" ></app-card>
+    </div>
 </div>

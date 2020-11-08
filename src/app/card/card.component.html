@@ -1,5 +1,6 @@
-<div class="wonka">
+<div class="card-component" (click)="openInfo()">
+    <img [src]="wonkaInfo.image" [alt]="wonkaInfo.image">
     <h1>{{wonkaInfo.first_name}}</h1>
     <p>Age:{{wonkaInfo.age}}</p>
-    <img [src]="wonkaInfo.image" [alt]="wonkaInfo.image">
+    <p><b>{{wonkaInfo.profession}}</b> </p>  
 </div>
