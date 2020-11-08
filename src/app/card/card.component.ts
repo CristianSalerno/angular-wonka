@@ -20,7 +20,6 @@ export class CardComponent implements OnInit {
   }
 
   openInfo(){
-    console.log(this.id)
     this.router.navigate([`/description/${this.id}`])
   }
 

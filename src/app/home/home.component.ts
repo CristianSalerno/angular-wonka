@@ -23,8 +23,5 @@ export class HomeComponent implements OnInit {
     this.wonkaWorkersList = this.wonkaWorkers?.results
   }
 
-  openInfo(){
-    console.log('entro')
-  }
   
 }

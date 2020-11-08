@@ -29,7 +29,7 @@ export class WonkadescriptionComponent implements OnInit {
 
  public async getWorkerInfo(id){
     this.id = this.route.snapshot.paramMap.get('pId');
-    const workerInfoFromService = await this.WorkerInfoService.getWonkaWorkerInfo(id);
+    const workerInfoFromService = await this.WorkerInfoService.getWonkaWorkerInfo(this.id);
 
     const params:ParamsObj = {
       age:workerInfoFromService.age,
