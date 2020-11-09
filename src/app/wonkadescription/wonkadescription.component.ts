@@ -3,6 +3,7 @@ import {WorkerInfoService} from '../services/services/workerInfo/worker-info.ser
 import { ParamsObj} from '../models/wonkaInfo.models';
 import {WonkaInfo} from '../models/wonkaInfo.models';
 import { ActivatedRoute } from '@angular/router';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-wonkadescription',
@@ -18,14 +19,15 @@ export class WonkadescriptionComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private WorkerInfoService:WorkerInfoService,
+    private spinnerService: NgxSpinnerService
   ) { }
 
   
 
- public async getWorkerInfo(id){
+ public async getWorkerInfo(){
     this.id = this.route.snapshot.paramMap.get('pId');
     const workerInfoFromService = await this.WorkerInfoService.getWonkaWorkerInfo(this.id);
-
+    
     const params:ParamsObj = {
       age:workerInfoFromService.age,
       first_name:workerInfoFromService.first_name,
@@ -34,11 +36,19 @@ export class WonkadescriptionComponent implements OnInit {
     }
 
     this.wonkaWorkerInfo = new WonkaInfo(params)
-    console.log(this.wonkaWorkerInfo)
+    
+    if (this.wonkaWorkerInfo != null){
+      this.spinnerService.hide();
+    }
   }
 
   ngOnInit(): void {
-    this.getWorkerInfo(this.id)
+    this.spinner();
+    this.getWorkerInfo()
+  }
+
+  spinner():void{
+    this.spinnerService.show();
   }
 
 }

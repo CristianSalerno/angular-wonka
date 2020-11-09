@@ -1,9 +1,17 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="line-scale-party"
+>
+  <p style="font-size: 20px; color: white">Loading Oompa...</p>
+</ngx-spinner>
 <div class="wonka--description"> 
-    <img [src]="wonkaWorkerInfo.image" [alt]="wonkaWorkerInfo.image">
+    <img [src]="wonkaWorkerInfo?.image" >
     <div class="wonka--information">
-        <h1>{{wonkaWorkerInfo.first_name}}</h1>
-        <p>{{wonkaWorkerInfo.age}}</p>
-        <p><span [innerHtml]="wonkaWorkerInfo.description"></span></p>
+        <h1>{{wonkaWorkerInfo?.first_name}}</h1>
+        <p>{{wonkaWorkerInfo?.age}}</p>
+        <p><span [innerHtml]="wonkaWorkerInfo?.description"></span></p>
         <button class="back-btn" [routerLink]="['/home']">back to loompa</button>
     </div> 
     
