@@ -1,1 +1,12 @@
-<p>the worker selected is {{id}}</p>
+<div class="wonka--description"> 
+    <img [src]="wonkaWorkerInfo.image" [alt]="wonkaWorkerInfo.image">
+    <div class="wonka--information">
+        <h1>{{wonkaWorkerInfo.first_name}}</h1>
+        <p>{{wonkaWorkerInfo.age}}</p>
+        <p><span [innerHtml]="wonkaWorkerInfo.description"></span></p>
+        <button class="back-btn" [routerLink]="['/home']">back to loompa</button>
+    </div> 
+    
+</div>
+
+

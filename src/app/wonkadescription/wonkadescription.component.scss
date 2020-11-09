@@ -1,0 +1,35 @@
+.wonka--description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 250px;
+  img {
+    width: 450px;
+  }
+  .wonka--information {
+    padding: 20px;
+    p,
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+
+    .back-btn {
+      font-size: 1em;
+      padding: 10px;
+      font-weight: 700;
+      color: rgb(155, 153, 153);
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(117, 116, 116);
+      }
+    }
+  }
+}

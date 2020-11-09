@@ -13,7 +13,7 @@ export class WonkadescriptionComponent implements OnInit {
 
   public id:String;
   wonkaWorkerInfo: WonkaInfo;
-
+  information: any[];
 
   constructor(
     private route: ActivatedRoute,
@@ -22,11 +22,6 @@ export class WonkadescriptionComponent implements OnInit {
 
   
 
-  ngOnInit(): void {
-    this.getWorkerInfo(this.id)
-  }
-
-
  public async getWorkerInfo(id){
     this.id = this.route.snapshot.paramMap.get('pId');
     const workerInfoFromService = await this.WorkerInfoService.getWonkaWorkerInfo(this.id);
@@ -34,13 +29,16 @@ export class WonkadescriptionComponent implements OnInit {
     const params:ParamsObj = {
       age:workerInfoFromService.age,
       first_name:workerInfoFromService.first_name,
-      image:workerInfoFromService.image
+      image:workerInfoFromService.image,
+      description:workerInfoFromService.description
     }
 
     this.wonkaWorkerInfo = new WonkaInfo(params)
-    
+    console.log(this.wonkaWorkerInfo)
+  }
 
-    console.log(workerInfoFromService)
+  ngOnInit(): void {
+    this.getWorkerInfo(this.id)
   }
 
 }
